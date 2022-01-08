@@ -1,20 +1,22 @@
 import string
 import random
 
-upper_case = string.ascii_uppercase
-lower_case = string.ascii_lowercase  
+def password_gen():
+    upper = string.ascii_uppercase
+    lower = string.ascii_lowercase
+    num = string.digits
+    symbols = string.punctuation
 
+    passlen = int(input("Enter Password Length: ")) 
+    s = []
+    s.extend(list(upper))
+    s.extend(list(lower))
+    s.extend(list(num))
+    s.extend(list(symbols))
+    random.shuffle(s)
+    password = ("".join(s[0:passlen]))
+    print(password)    
 
-lower = list(lower_case)  
-upper = list(upper_case)
-special = ['!','1', '@','2', '#','3', '%','4','5','*','6', '(','7', ')','8', '-','9', '+','0']
-password = ""
-
-def generate():
-    for i in range(19):
-        num = random.randint(0, 19)
-        
-
-    
+password_gen()   
 
 

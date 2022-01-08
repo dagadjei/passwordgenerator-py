@@ -1,0 +1,1 @@
+passlen = int(input("Enter Password Length: ")) 
